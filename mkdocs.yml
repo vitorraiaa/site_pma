@@ -1,8 +1,8 @@
 site_name: Platforms, Microservices, DevOps and APIs
 site_author: Vitor Raia
-site_url: https://vitorraiaa.github.io/documentation_MicroServices_Exercises/
-repo_url: https://github.com/vitorraiaa/documentation_MicroServices_Exercises.git
-repo_name: github/documentation.template
+site_url: https://vitorraiaa.github.io/site_pma/
+repo_url: https://github.com/vitorraiaa/site_pma.git
+repo_name: github/site_pma
 
 theme:
   name: material
@@ -110,7 +110,7 @@ plugins:
       enable_creation_date: true
   - git-authors
   - git-committers:
-      repository: vitorraiaa/documentation_MicroServices_Exercises
+      repository: vitorraiaa/site_pma.git
       branch: main
   - search
   - badges
