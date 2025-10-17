@@ -272,7 +272,7 @@ public class OrderService {
                 }
             ],
             "total": 49.699999999999996
-    }
+        }
 
         ```
         ```bash
