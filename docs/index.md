@@ -3,62 +3,45 @@
 
 ???+ info inline end "Edição"
 
-    2025.1
+    2025.5
 
 
-## Grupo/Kit X
+## Aluno
 
-1. João da Silva
-1. Pedro de Souza
-1. Maria Oliveira
-1. Grupo K
-    - João da Silva
-    - Pedro de Souza
-
-
-
-!!! tip "Instruções"
-
-    Vocês devem utilizar este template como um bloco de notas para registrar o que foi feito e o que falta fazer. Vocês devem adicionar as informações necessárias.
-    O template deve ser editado e atualizado a cada entrega, registrando assim a data de entrega e o que foi feito até o momento via Git.
+1. Vitor Raia
 
 ## Entregas
 
-- [x] Roteiro 1 - Data 23/02/2025
-- [ ] Roteiro 2
-- [ ] Roteiro 3
-- [ ] Roteiro 4
+- [x] Roteiro 1 - Data 24/09/2025
+- [x] Roteiro 2 - Data 07/10/2025
+- [x] Roteiro 3 - Data 15/10/2025
+- [x] Roteiro 4 - Data 17/10/2025
 - [ ] Projeto
 
-## Diagramas
-
-Use o [Mermaid](https://mermaid.js.org/intro/){:target='_blank'} para criar os diagramas de documentação.
-
-[Mermaid Live Editor](https://mermaid.live/){:target='_blank'}
-
+## Diagrama
 
 ``` mermaid
-flowchart TD
-    Deployment:::orange -->|defines| ReplicaSet
-    ReplicaSet -->|manages| pod((Pod))
-    pod:::red -->|runs| Container
-    Deployment -->|scales| pod
-    Deployment -->|updates| pod
-
-    Service:::orange -->|exposes| pod
-
-    subgraph  
-        ConfigMap:::orange
-        Secret:::orange
+flowchart LR
+    subgraph api [Subnet API]
+        direction TB
+        gateway --> account
+        gateway --> auth:::red
+        gateway --> product
+        gateway --> order
+        gateway --> exchange
+        auth --> account
+        order --> product
+        account --> db@{ shape: cyl, label: "Database" }
+        product --> db
+        order --> db
     end
-
-    ConfigMap --> Deployment
-    Secret --> Deployment
-    classDef red fill:#f55
-    classDef orange fill:#ffa500
+    exchange e3@==> 3partyapi:::green@{label: "3rd-party API"}
+    internet e2@==> |request| gateway:::orange
+    e2@{ animate: true }
+    e3@{ animate: true }
+    classDef green fill:#cfc
+    classDef orange fill:#FCBE3E
 ```
-
-
 
 ## Códigos
 
