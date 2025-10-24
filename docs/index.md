@@ -16,6 +16,8 @@
 - [x] Roteiro 2
 - [x] Roteiro 3 
 - [x] Roteiro 4 
+- [x] Roteiro 5 
+
 - [ ] Projeto
 
 ## Diagrama
